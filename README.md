@@ -33,7 +33,7 @@ To begin you will need to turn a simple jelly baby into a switch by attaching ca
 
 8. Finally plug in a Micro USB power supply to start your Pi and log in. The default login for Raspberry Pi is: login `pi` and password `raspberry` 
     
-## Step 3: Downloading and playing screams!
+## Step 2: Downloading and playing screams!
 
 So far you have created your input device and got your Raspberry Pi setup and running. You now need to download a scream sound file and install some software to be able to play it. This task can be achieved from the command line.
 
@@ -46,16 +46,16 @@ So far you have created your input device and got your Raspberry Pi setup and ru
     ```
     The Raspberry Pi is waiting for you to type in a command to do something. This is referred to as the command line. 
 
-2.  Type the following command and press **enter* to install a program that can play mp3 files:
+2.  Type the following command and press **enter** to install a program that can play mp3 files:
 
     ```
     sudo apt-get install vlc
     ```
     
-3.  Download an mp3 sound effect to play when the Jelly Baby is pressed - all of this instruction should be typed on one line 
+3.  Download an mp3 sound effect to play when the Jelly Baby is pressed - all of this instruction should be typed on one line with the same uppercase and lowercase characters.
 
     ```
-    wget https://github.com/Rob-Bishop/RaspberryPiRecipes/raw/master/la.mp3 
+    wget http://goo.gl/oejqP5 
     ```
 4.  Now test that you can play the sound file using mplayer by typing:
 
@@ -65,4 +65,63 @@ So far you have created your input device and got your Raspberry Pi setup and ru
     
     vlc will play the downloaded sound file and you should hear it from the speaker or headphones connected to your Pi. If     you can not hear anything, make sure that your headphones or speaker are connected correctly.  
     
+## Step 3: Write a program in Python
+
+The final step to make your Jelly Baby scream is to write a program in Python that detects when you press the Jelly Baby input device and outputs the scream sound.
+
+**Activity Checklist:**
+
+1. To write your Python program you will need to open a text editor window from the command-line. To do this type:
+
+    ```
+    nano scream.py
+    ```
+
+2. Begin your program by importing the modules and libraries needed to make it work. Type the following:
+
+    ```python
+    import time
+    import RPi.GPIO as GPIO
+    import os
+    ```
+    
+    The time library will be used to make the program pause for a fixed amount of time. The Raspberry Pi GPIO libraries       will be used to connect the Raspberry Pi to other physical devices via the General Purpose Input-Output (GPIO) pins,      in this case your Jelly Baby input device! The os library will be used to allow our program to call other programs        that run on the Raspberry Pi like vlc.
+    
+3. Now you will need to set-up the General Purpose Input-Ouput (GPIO) pins. Leave a line empty by pressing enter on your keyboard and the type the following:
+
+    ```python
+    GPIO.cleanup()
+    ```
+    
+    This line of code will clear the current set-up so that you can begin a fresh. 
+    
+4. Setup the GPIO library to use GPIO board pin numbers by typing: 
+
+    ```python
+    GPIO.setmode(GPIO.BOARD)
+    ```
+    
+5. Set pin 3 on the GPIO header to be an input
+
+    ```python
+    GPIO.setup(3,GPIO.IN)    
+    ```
+6. Create a loop runs forever and plays the screaming sound file when the two wires inside the Jelly Baby are touching by typing:
+
+    ```python
+    while True:
+        if GPIO.input(3) == False:
+        os.system(‘mpg321 la.mp3 &’)
+        time.sleep(1);
+    ```
+
+7. Save the file by pressing `CTRL+X`, then `Y` for yes, followed by `Enter`.
+
+8. Fianlly, run the program by typing:
+
+    ```
+    sudo python SingingJellyBaby.py 
+    ```
+    
+**Congratulations!** Now when you press the Jelly Baby, the wires will touch and the mp3 file will play
     
