@@ -111,7 +111,7 @@ The final step to make your Jelly Baby scream is to write a program in Python th
     ```python
     while True:
         if GPIO.input(3) == False:
-        os.system(‘mpg321 la.mp3 &’)
+        os.system('cvlc la.mp3 &')
         time.sleep(1);
     ```
 
