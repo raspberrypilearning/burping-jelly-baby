@@ -124,4 +124,9 @@ The final step to make your Jelly Baby scream is to write a program in Python th
     ```
     
 **Congratulations!** Now when you press the Jelly Baby, the wires will touch and the mp3 file will play
+
+## Things to try:
+- Using a real button or switch connected to a breadboard
+- Changing the sound that plays when the device is pressed
+- Can you think of a way to use more inputs?
     
