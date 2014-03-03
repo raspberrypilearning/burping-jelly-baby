@@ -112,7 +112,7 @@ The final step to make your Jelly Baby scream is to write a program in Python th
     ```python
     GPIO.setup(3,GPIO.IN)    
     ```
-6. Create a loop runs forever and plays the screaming sound file when the two wires inside the Jelly Baby are touching by typing:
+6. Create a loop that runs forever and plays the screaming sound file when the two wires inside the Jelly Baby are touching by typing:
 
     ```python
     while True:
@@ -126,7 +126,7 @@ The final step to make your Jelly Baby scream is to write a program in Python th
 8. Finally, run the program by typing:
 
     ```
-    sudo python SingingJellyBaby.py 
+    sudo python scream.py 
     ```
     
 **Congratulations!** Now when you press the Jelly Baby, the wires will touch and the mp3 file will play
