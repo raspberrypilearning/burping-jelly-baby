@@ -62,7 +62,7 @@ So far you have created your input device and got your Raspberry Pi setup and ru
 3.  Download an mp3 sound effect to play when the Jelly Baby is pressed - all of this instruction should be typed on one line with the same uppercase and lowercase characters.
 
     ```
-    wget http://goo.gl/oejqP5
+    wget http://goo.gl/MOXGX3 -O la.mp3
     ```
     
 4.  Now test that you can play the sound file using mplayer by typing:
