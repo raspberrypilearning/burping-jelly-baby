@@ -16,7 +16,7 @@ To begin you will need to turn a simple jelly baby into a switch by attaching ca
 - An SD card with the latest version of Raspbian installed via NOOBS
 - Two metal paper clips or dress pins
 - Two female to female jumper wires
-- A jelly Baby
+- A Jelly Baby
 
 
 **Activity Checklist:**
@@ -95,20 +95,14 @@ The final step to make your Jelly Baby scream is to write a program in Python th
     
     The time library will be used to make the program pause for a fixed amount of time. The Raspberry Pi GPIO libraries       will be used to connect the Raspberry Pi to other physical devices via the General Purpose Input-Output (GPIO) pins,      in this case your Jelly Baby input device! The os library will be used to allow our program to call other programs        that run on the Raspberry Pi like vlc.
     
-3. Now you will need to set-up the General Purpose Input-Ouput (GPIO) pins. Leave a line empty by pressing enter on your keyboard and the type the following:
-
-    ```python
-    GPIO.cleanup()
-    ```
-    
-    This line of code will clear the current set-up so that you can begin a fresh. 
-    
-4. Setup the GPIO library to use GPIO board pin numbers by typing: 
-
+3. Now you will need to set-up the General Purpose Input-Ouput (GPIO) pins to use GPIO board pin numbers. Leave a line empty by pressing enter on your keyboard, then type:
     ```python
     GPIO.setmode(GPIO.BOARD)
     ```
-    
+4. Now, to switch off warnings about "Ports already in use" press Enter to give you a new line and type:
+    ```python
+    GPIO.setwarnings(False)
+    ```
 5. Set pin 3 on the GPIO header to be an input
 
     ```python
@@ -125,7 +119,7 @@ The final step to make your Jelly Baby scream is to write a program in Python th
 
 7. Save the file by pressing `CTRL+X`, then `Y` for yes, followed by `Enter`.
 
-8. Fianlly, run the program by typing:
+8. Finally, run the program by typing:
 
     ```
     sudo python SingingJellyBaby.py 
