@@ -9,7 +9,15 @@ To begin you will need to turn a simple jelly baby into a switch by attaching ca
 
 **You will need:**
 
-![alt text](image.png "Components")
+- A Raspberry Pi
+- Connected to a monitor or TV
+- A keyboard and mouse
+- A speaker or headphones
+- An SD card with the latest version of Raspbian installed via NOOBS
+- Two metal paper clips or dress pins
+- Two female to female jumper wires
+- A jelly Baby
+
 
 **Activity Checklist:**
 
