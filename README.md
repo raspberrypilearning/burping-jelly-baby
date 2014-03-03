@@ -96,19 +96,24 @@ The final step to make your Jelly Baby scream is to write a program in Python th
     The time library will be used to make the program pause for a fixed amount of time. The Raspberry Pi GPIO libraries       will be used to connect the Raspberry Pi to other physical devices via the General Purpose Input-Output (GPIO) pins,      in this case your Jelly Baby input device! The os library will be used to allow our program to call other programs        that run on the Raspberry Pi like vlc.
     
 3. Now you will need to set-up the General Purpose Input-Ouput (GPIO) pins to use GPIO board pin numbers. Leave a line empty by pressing enter on your keyboard, then type:
+
     ```python
     GPIO.setmode(GPIO.BOARD)
     ```
+
 4. Now, to switch off warnings about "Ports already in use" press Enter to give you a new line and type:
+
     ```python
     GPIO.setwarnings(False)
     ```
+
 5. Set pin 3 on the GPIO header to be an input
 
     ```python
     GPIO.setup(3,GPIO.IN)    
     ```
-6. Create a loop runs forever and plays the screaming sound file when the two wires inside the Jelly Baby are touching by typing:
+
+6. Create a loop that runs forever and plays the screaming sound file when the two wires inside the Jelly Baby are touching by typing:
 
     ```python
     while True:
