@@ -68,7 +68,7 @@ So far you have created your input device and got your Raspberry Pi setup and ru
 4.  Now test that you can play the sound file using mplayer by typing:
 
     ```
-    clvc /home/pi/la.mp3
+    cvlc /home/pi/la.mp3
     ```
     
     ```vlc``` will play the downloaded sound file and you should hear it from the speaker or headphones connected to your Pi.
