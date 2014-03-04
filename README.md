@@ -130,8 +130,7 @@ The final step to make your Jelly Baby scream is to write a program in Python th
     ```
     
 **Congratulations!** Now when you press the Jelly Baby, the wires will touch and the mp3 file will play.
-
-9. Exit the program when finished by pressing `CTRL+X`
+Exit the program when finished by pressing `CTRL+X`
 
 
 
