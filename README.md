@@ -39,7 +39,11 @@ To begin you will need to turn a simple jelly baby into a switch by attaching ca
 7. Set up the rest of your Raspberry Pi with an SD card with the latest Raspbian image installed via NOOBS, a keyboard, mouse, a HDMI cable to a monitor or TV, a connection to the internet, and a speaker so that you can hear your Jelly Baby screaming. [See the Raspberry Pi Quick Start Guide here](http://www.raspberrypi.org/quick-start-guide)    
 
 8. Finally plug in a Micro USB power supply to start your Pi and log in. The default login for Raspberry Pi is: login `pi` and password `raspberry` 
-    
+
+9. If you are using headphones on the Raspberry Pi you will need to run the following command to redirect sound from HDMI to the headphone jack.
+
+    `sudo amixer cset numid=3 1`
+
 ## Step 2: Downloading and playing screams!
 
 So far you have created your input device and got your Raspberry Pi setup and running. You now need to download a scream sound file and install some software to be able to play it. This task can be achieved from the command line.
