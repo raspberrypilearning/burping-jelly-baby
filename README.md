@@ -72,6 +72,7 @@ So far you have created your input device and got your Raspberry Pi setup and ru
     ```omxplayer``` will play the downloaded sound file and you should hear it from the speaker or headphones connected to your Pi.
     
     If you cannot hear anything, make sure that your headphones or speakers are connected correctly.  If the jack/plug looks like the picture below (notice the **three** black bands) you may find that it will only work if you pull the plug out by a few milimeters.
+    
     ![image](./images/3-5mmjack.jpg "3.5 mm headphone jack")
     
 ## Step 3: Write a program in Python
