@@ -52,26 +52,20 @@ So far you have created your input device and got your Raspberry Pi setup and ru
     pi@raspberry ~ $
     ```
     The Raspberry Pi is waiting for you to type in a command to do something. This is referred to as the command line. 
-
-2.  Type the following command and press ```enter``` to install a program that can play mp3 files:
-
-    ```
-    sudo apt-get install vlc
-    ```
     
-3.  Download an mp3 sound effect to play when the Jelly Baby is pressed - all of this instruction should be typed on one line with the same uppercase and lowercase characters.
+2.  Download an mp3 sound effect to play when the Jelly Baby is pressed - all of this instruction should be typed on one line with the same uppercase and lowercase characters.
 
     ```
     wget http://goo.gl/MOXGX3 -O la.mp3 --no-check-certificate
     ```
     
-4.  Now test that you can play the sound file using mplayer by typing:
+3.  Now test that you can play the sound file using mplayer by typing:
 
     ```
-    cvlc /home/pi/la.mp3
+    omxplayer la.mp3
     ```
     
-    ```vlc``` will play the downloaded sound file and you should hear it from the speaker or headphones connected to your Pi.
+    ```omxplayer``` will play the downloaded sound file and you should hear it from the speaker or headphones connected to your Pi.
     
     If you can not hear anything, make sure that your headphones or speaker are connected correctly.  
     
@@ -95,7 +89,7 @@ The final step to make your Jelly Baby scream is to write a program in Python th
     import os
     ```
     
-    The time library will be used to make the program pause for a fixed amount of time. The Raspberry Pi GPIO libraries       will be used to connect the Raspberry Pi to other physical devices via the General Purpose Input-Output (GPIO) pins, in this case your Jelly Baby input device! The os library will be used to allow our program to call other programs that run on the Raspberry Pi like vlc.
+    The time library will be used to make the program pause for a fixed amount of time. The Raspberry Pi GPIO libraries       will be used to connect the Raspberry Pi to other physical devices via the General Purpose Input-Output (GPIO) pins, in this case your Jelly Baby input device! The `os` library will be used to allow our program to call other programs that run on the Raspberry Pi like `omxplayer`.
     
 3. Now you will need to set-up the General Purpose Input-Ouput (GPIO) pins to use GPIO board pin numbers. Leave a line empty by pressing enter on your keyboard, then type:
 
@@ -117,8 +111,8 @@ The final step to make your Jelly Baby scream is to write a program in Python th
     ```python
     while True:
         if GPIO.input(3) == False:
-        os.system('cvlc la.mp3 &')
-        time.sleep(1);
+            os.system('omxplayer la.mp3 &')
+            time.sleep(1);
     ```
 
 7. Save the file by pressing `CTRL+X`, then `Y` for yes, followed by `Enter`.
