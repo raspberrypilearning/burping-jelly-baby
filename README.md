@@ -59,7 +59,7 @@ So far you have created your input device and got your Raspberry Pi setup and ru
     wget http://goo.gl/MOXGX3 -O la.mp3 --no-check-certificate
     ```
     
-3.  Now test that you can play the sound file using mplayer by typing:
+3.  Now test that you can play the sound file using `omxplayer` by typing:
 
     ```
     omxplayer la.mp3
