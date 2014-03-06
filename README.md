@@ -40,7 +40,7 @@ To begin you will need to turn a simple jelly baby into a switch by attaching ca
 
 8. Finally plug in a Micro USB power supply to start your Pi and log in. The default login for Raspberry Pi is: login `pi` and password `raspberry` 
 
-9. If you are using headphones on the Raspberry Pi you will need to run the following command to redirect sound from HDMI to the headphone jack.
+9. If you are using headphones or a speaker on the Raspberry Pi you will need to run the following command to redirect sound to the headphone socket.
 
     `sudo amixer cset numid=3 1`
 
@@ -71,7 +71,8 @@ So far you have created your input device and got your Raspberry Pi setup and ru
     
     ```omxplayer``` will play the downloaded sound file and you should hear it from the speaker or headphones connected to your Pi.
     
-    If you can not hear anything, make sure that your headphones or speaker are connected correctly.  
+    If you cannot hear anything, make sure that your headphones or speakers are connected correctly.  If the jack/plug looks like the picture below (notice the **three** black bands) you may find that it will only work if you pull the plug out by a few milimeters.
+    ![image](./images/3-5mmjack.jpg "3.5 mm headphone jack")
     
 ## Step 3: Write a program in Python
 
