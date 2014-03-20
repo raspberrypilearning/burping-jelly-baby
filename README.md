@@ -1,18 +1,50 @@
 # Make a Jelly Baby Scream!
 
-You will learn how to turn a Jelly Baby into an input device for your Raspberry Pi. You will then create a program to make it scream when it is pressed. 
+You will learn how to turn a Jelly Baby into an input device for your Raspberry Pi. You will then create a program to make it scream when it is pressed.
+
+##Requirements
+
+- Raspberry Pi
+- Micro USB power adaptor
+- An SD card with Raspbian already set up through NOOBS
+- USB keyboard
+- USB mouse
+- HDMI cable
+- A monitor or TV
+- Two metal paper clips or dress pins
+- Two female to female jumper wires
+- A Jelly Baby
+
+## Step 0: Setting Up your Pi
+
+First check that you have all the parts you need to get your Raspberry Pi set up and working.
+
+- Raspberry Pi
+- Micro USB power adaptor
+- An SD card with Raspbian already set up through NOOBS
+- USB keyboard
+- USB mouse
+- HDMI cable
+- A monitor or TV
+
+###Activity Checklist
+
+1.	Place the SD card into the slot of your Raspberry Pi. It will only fit one way so be careful not to break the card. 
+2.	Next connect the HDMI cable from the monitor (or TV) to the HDMI port on the Pi and turn on your monitor. 
+3.	Plug the USB keyboard and mouse into the USB ports on the Pi.
+4.	Plug in the micro USB power supply and you should see some text appear on your screen.
+5.  When prompted to login type:
+
+    ```
+    Login: pi
+    Password: raspberry
+    ```
 
 ## Step 1: Wire up a Jelly Baby
 
 To begin you will need to turn a simple jelly baby into a switch by attaching cables to it and then connecting them to the GPIO pins on a Raspberry Pi.
 
-### You will need
 
-- A Raspberry Pi
-- Connected to a monitor or TV
-- A keyboard and mouse
-- A speaker or headphones
-- An SD card with the latest version of Raspbian installed via NOOBS
 - Two metal paper clips or dress pins
 - Two female to female jumper wires
 - A Jelly Baby
@@ -73,7 +105,7 @@ So far you have created your input device and got your Raspberry Pi setup and ru
     
     If you cannot hear anything, make sure that your headphones or speakers are connected correctly.  If the jack/plug looks like the picture below (notice the **three** black bands) you may find that it will only work if you pull the plug out by a few milimeters.
     
-    ![image](./images/3-5mmjack.jpg "3.5 mm headphone jack")
+    ![](./images/3-5mmjack.jpg "3.5 mm headphone jack")
     
 ## Step 3: Write a program in Python
 
