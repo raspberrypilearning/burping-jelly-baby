@@ -16,7 +16,7 @@ You will learn how to turn a jelly baby into an input device for your Raspberry 
 - Two female to female jumper wires
 - A jelly baby
 
-## Step 0: Setting Up your Pi
+## Step 0: Setting up your Pi
 
 First check that you have all the parts you need to get your Raspberry Pi set up and working.
 
@@ -28,7 +28,7 @@ First check that you have all the parts you need to get your Raspberry Pi set up
 - HDMI cable
 - A monitor or TV
 
-###Activity Checklist
+###Activity checklist:
 
 1.	Place the SD card into the slot of your Raspberry Pi. It will only fit one way so be careful not to break the card. 
 2.	Next connect the HDMI cable from the monitor (or TV) to the HDMI port on the Pi and turn on your monitor. 
@@ -41,11 +41,11 @@ First check that you have all the parts you need to get your Raspberry Pi set up
     Password: raspberry
     ```
 
-## Step 1: Wire up a Jelly Baby
+## Step 1: Wire up a jelly baby
 
 To begin to turn a simple jelly baby into a switch, you will attach cables to it and then connect them to the GPIO pins on a Raspberry Pi.
 
-### Activity Checklist
+### Activity checklist:
 
 1. Take the metal paper clips and unfold them to make a straight wire.
 
@@ -71,7 +71,7 @@ To begin to turn a simple jelly baby into a switch, you will attach cables to it
 
 So far you have created your input device and have your Raspberry Pi set up and running. You now need to download a scream sound file and install some software to be able to play it. This task can be achieved from the command line.
 
-### Activity Checklist
+### Activity checklist:
 
 1.  After logging into your Raspberry Pi you will see the following text:
     
@@ -102,7 +102,7 @@ So far you have created your input device and have your Raspberry Pi set up and 
 
 The final step to make your jelly baby scream is to write a program in Python; it will detect when you press the jelly baby input device and output the scream sound.
 
-### Activity Checklist
+### Activity checklist:
 
 1. To write your Python program you will need to open a text editor window from the command line. To do this type the following command:
 
