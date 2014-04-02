@@ -30,8 +30,8 @@ First check that you have all the parts you need to get your Raspberry Pi set up
 
 ###Activity checklist:
 
-1.	Place the SD card into the slot of your Raspberry Pi. It will only fit one way so be careful not to break the card. 
-2.	Next connect the HDMI cable from the monitor (or TV) to the HDMI port on the Pi and turn on your monitor. 
+1.	Place the SD card into the slot of your Raspberry Pi. It will only fit one way so be careful not to break the card.
+2.	Next connect the HDMI cable from the monitor (or TV) to the HDMI port on the Pi and turn on your monitor.
 3.	Plug the USB keyboard and mouse into the USB ports on the Pi.
 4.	Plug in the micro USB power supply and you should see some text appear on your screen.
 5.  When prompted to login type:
@@ -49,11 +49,11 @@ To begin to turn a simple jelly baby into a switch, you will attach cables to it
 
 1. Take the metal paper clips and unfold them to make a straight wire.
 
-2. Take a female to female jumper cable and push the paper clip wire into one of the ends. 
+2. Take a female to female jumper cable and push the paper clip wire into one of the ends.
 
-3. Do the same to the other wire so that you have two identical jumper cables with paper clip wires in one end. 
+3. Do the same to the other wire so that you have two identical jumper cables with paper clip wires in one end.
 
-4. Insert the paper clips into a jelly baby so that they are close to each other but not touching. 
+4. Insert the paper clips into a jelly baby so that they are close to each other but not touching.
 
     The picture above shows the Raspberry Pi GPIO header pins; the diagram above the pins shows the pin numbers. You will be using pin 3 and pin 25.
 
@@ -74,30 +74,30 @@ So far you have created your input device and have your Raspberry Pi set up and 
 ### Activity checklist:
 
 1.  After logging into your Raspberry Pi you will see the following text:
-    
+
     ```
     pi@raspberry ~ $
     ```
-    The Raspberry Pi is waiting for you to type in a command to do something. This is referred to as the command line. 
-    
+    The Raspberry Pi is waiting for you to type in a command to do something. This is referred to as the command line.
+
 2.  Download an mp3 sound effect to play when the jelly baby is pressed. Enter the following command; it should be typed on one line with the same uppercase and lowercase characters:
 
     ```
     wget http://goo.gl/MOXGX3 -O la.mp3 --no-check-certificate
     ```
-    
+
 3.  Now test that you can play the sound file using `omxplayer` by typing:
 
     ```
     omxplayer la.mp3
     ```
-    
+
     ```omxplayer``` will play the downloaded sound file and you should hear it from the speakers or headphones connected to your Pi.
-    
+
     If you cannot hear anything, make sure that your headphones or speakers are connected correctly.  If the jack/plug looks like the picture below (notice the three black bands) you may find that it will only work if you pull the plug out by a few millimetres.
-    
+
     ![](./images/3-5mmjack.jpg "3.5 mm headphone jack")
-    
+
 ## Step 3: Write a program in Python
 
 The final step to make your jelly baby scream is to write a program in Python; it will detect when you press the jelly baby input device and output the scream sound.
@@ -117,9 +117,9 @@ The final step to make your jelly baby scream is to write a program in Python; i
     import RPi.GPIO as GPIO
     import os
     ```
-    
+
     The time library will be used to make the program pause for a fixed amount of time. The Raspberry Pi GPIO libraries will be used to connect the Raspberry Pi to other physical devices via the General Purpose Input-Output (GPIO) pins, in this case your jelly baby input device! The `os` library will be used to allow our program to call other programs that run on the Raspberry Pi like `omxplayer`.
-    
+
 3. Now you will need to set up the GPIO pins to use GPIO board pin numbers. Leave a line empty by pressing Enter on your keyboard, then type:
 
     ```python
@@ -133,7 +133,7 @@ The final step to make your jelly baby scream is to write a program in Python; i
 5. Set pin 3 on the GPIO header to be an input with the following command:
 
     ```python
-    GPIO.setup(3,GPIO.IN)    
+    GPIO.setup(3,GPIO.IN)
     ```
 6. Create a loop that runs forever and plays the screaming sound file when the two wires inside the jelly baby are touching by typing the following:
 
@@ -149,11 +149,11 @@ The final step to make your jelly baby scream is to write a program in Python; i
 8. Finally, run the program by typing:
 
     ```
-    sudo python scream.py 
+    sudo python scream.py
     ```
-    
+
     **Congratulations!** Now when you press the jelly baby, the wires will touch and the mp3 file will play.
-    
+
 9. Exit the program when you are finished by pressing `CTRL+C`.
 
 ## Things to try:
@@ -161,4 +161,13 @@ The final step to make your jelly baby scream is to write a program in Python; i
 - Using a real button or switch connected to a breadboard
 - Changing the sound that plays when the device is pressed
 - Can you think of a way to use more inputs?
-    
+
+## Licence
+
+Unless otherwise specified, everything in this repository is covered by the following licence:
+
+![Creative Commons License](http://i.creativecommons.org/l/by-sa/4.0/88x31.png)
+
+***Screaming Jelly Baby*** by the [Raspberry Pi Foundation](http://raspberrypi.org) is licenced under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+
+Based on a work at https://github.com/raspberrypilearning/screaming-jellybaby
