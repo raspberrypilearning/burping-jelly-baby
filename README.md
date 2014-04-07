@@ -2,44 +2,14 @@
 
 You will learn how to turn a jelly baby into an input device for your Raspberry Pi. You will then create a program to make it scream when it is pressed.
 
-##Requirements
+## What you will need
 
-- Raspberry Pi
-- Micro USB power adaptor
-- An SD card with Raspbian already set up through NOOBS
-- USB keyboard
-- USB mouse
-- HDMI cable
-- A monitor or TV
+As well as an internet connected Raspberry Pi and all its essential peripherals, you'll need:
+
 - Speakers or headphones
 - Two metal paper clips or dress pins
-- Two female to female jumper wires
+- Two *female-to-female* jumper wires
 - A jelly baby
-
-## Step 0: Setting up your Pi
-
-First check that you have all the parts you need to get your Raspberry Pi set up and working.
-
-- Raspberry Pi
-- Micro USB power adaptor
-- An SD card with Raspbian already set up through NOOBS
-- USB keyboard
-- USB mouse
-- HDMI cable
-- A monitor or TV
-
-###Activity checklist:
-
-1.	Place the SD card into the slot of your Raspberry Pi. It will only fit one way so be careful not to break the card.
-2.	Next connect the HDMI cable from the monitor (or TV) to the HDMI port on the Pi and turn on your monitor.
-3.	Plug the USB keyboard and mouse into the USB ports on the Pi.
-4.	Plug in the micro USB power supply and you should see some text appear on your screen.
-5.  When prompted to login type:
-
-    ```
-    Login: pi
-    Password: raspberry
-    ```
 
 ## Step 1: Wire up a jelly baby
 
@@ -96,7 +66,7 @@ So far you have created your input device and have your Raspberry Pi set up and 
 
     If you cannot hear anything, make sure that your headphones or speakers are connected correctly.  If the jack/plug looks like the picture below (notice the three black bands) you may find that it will only work if you pull the plug out by a few millimetres.
 
-    ![](./images/3-5mmjack.jpg "3.5 mm headphone jack")
+    ![](./images/3-5mmjack.jpg)
 
 ## Step 3: Write a program in Python
 
@@ -125,16 +95,19 @@ The final step to make your jelly baby scream is to write a program in Python; i
     ```python
     GPIO.setmode(GPIO.BOARD)
     ```
+    
 4. To switch off the "Ports already in use" warnings, press Enter to give you a new line and type:
 
     ```python
     GPIO.setwarnings(False)
     ```
+    
 5. Set pin 3 on the GPIO header to be an input with the following command:
 
     ```python
     GPIO.setup(3,GPIO.IN)
     ```
+    
 6. Create a loop that runs forever and plays the screaming sound file when the two wires inside the jelly baby are touching by typing the following:
 
     ```python
