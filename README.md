@@ -35,7 +35,7 @@ To begin to turn a simple jelly baby into a switch, you will attach cables to it
 
 7. Make sure your Raspberry Pi has an internet connection, and speakers or headphones so that you can hear your jelly baby screaming. If you are using headphones or a speaker on the Raspberry Pi, you will need to run the following command to redirect sound to the headphone socket:
 
-    `sudo amixer cset numid=3 1`
+    `amixer cset numid=3 1`
 
 ## Step 2: Downloading and playing screams!
 
