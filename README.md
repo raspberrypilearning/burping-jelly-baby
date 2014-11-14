@@ -1,6 +1,6 @@
 # Make a Jelly Baby Scream!
 
-You will learn how to turn a jelly baby into an input device for your Raspberry Pi. You will then create a program to make it scream when it is squeezed.
+You will learn how to turn a jelly baby into an input device for your Raspberry Pi. You will then create a program to make it scream when it is squeezed. 
 
 ## What you will need
 
@@ -13,7 +13,10 @@ As well as an internet connected Raspberry Pi and all its essential peripherals,
 
 ## Step 1: Wire up a jelly baby
 
-To begin to turn a simple jelly baby into a switch, you will attach cables to it and then connect them to the GPIO pins on a Raspberry Pi.
+To begin to turn a simple jelly baby into a switch, you will attach cables to it and then connect them to the GPIO pins on a Raspberry Pi. After this Step, your Raspberry Pi should look something like this, with the cables plugged into pin 3 and pin 25: 
+
+    ![](./images/ScreamingJellyBabyWiredPi.jpg)
+
 
 ### Activity checklist:
 
@@ -24,8 +27,6 @@ To begin to turn a simple jelly baby into a switch, you will attach cables to it
 3. Do the same to the other wire so that you have two identical jumper cables with paper clip wires in one end.
 
 4. Insert the paper clips into a jelly baby so that they are close to each other but not touching.
-
-    The picture above shows the Raspberry Pi GPIO header pins; the diagram above the pins shows the pin numbers. You will be using pin 3 and pin 25.
 
 5. Take the other end of one of the jumper leads and push it onto pin 3 of the General Purpose Input-Output (GPIO) header which is connected to one of the GPIO channels.
 
