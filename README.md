@@ -15,7 +15,7 @@ As well as an internet connected Raspberry Pi and all its essential peripherals,
 
 To begin to turn a simple jelly baby into a switch, you will attach cables to it and then connect them to the GPIO pins on a Raspberry Pi. After this Step, your Raspberry Pi should look something like this, with the cables plugged into pin 3 and pin 25: 
 
-    ![](./images/ScreamingJellyBabyWiredPi.jpg)
+![](./images/ScreamingJellyBabyWiredPi.jpg)
 
 
 ### Activity checklist:
