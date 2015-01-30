@@ -11,3 +11,6 @@ As well as an internet connected Raspberry Pi and all its essential peripherals,
 - Two *female-to-female* jumper wires
 - A jelly baby
 
+## The worksheet
+
+- [Worksheet](worksheet.md)
