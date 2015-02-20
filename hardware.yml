@@ -1,6 +1,6 @@
 - name: Speakers or headphones
   img: speakers
-  url:http://thepihut.com/products/mini-portable-speaker-for-the-raspberry-pi
+  url: http://thepihut.com/products/mini-portable-speaker-for-the-raspberry-pi
 - name: 2 x metal paperclips or dress pins
   img: metal-paperclips
   url:
