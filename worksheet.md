@@ -2,7 +2,36 @@
 
 To begin to turn a simple jelly baby into a switch, you will attach cables to it and then connect them to the GPIO pins on a Raspberry Pi.
 
-### Activity checklist:
+1. Looking at the following GPIO diagram, comapre it to your Raspberry Pi. 
+
+    *GPIO stands for **General Purpose Input Output**. It is a way in which the Raspberry Pi can control and monitor the outside world by being connected to electronic circuits.  The Pi is able to control LEDs, turning them on or off, or motors, or many other things.  It is also able to detect whether a switch has been pressed, or temperature, or light.*
+
+    You'll be using a single ground pin (marked `GND`) and a GPIO pin (marked `GPIO`):
+
+|            |            |
+|-----------:|:-----------|
+|    3V3     | 5V         |
+|  **GPIO2** | 5V         |
+|  **GPIO3** | GND        |
+|  **GPIO4** | **GPIO14** |
+|        GND | **GPIO15** |
+| **GPIO17** | **GPIO18** |
+| **GPIO27** | GND        |
+| **GPIO22** | **GPIO23** |
+|        3V3 | **GPIO24** |
+| **GPIO10** | GND        |
+|  **GPIO9** | **GPIO25** |
+| **GPIO11** | **GPIO8**  |
+|        GND | **GPIO7**  |
+|        DNC | DNC        |
+|  **GPIO5** | GND        |
+|  **GPIO6** | **GPIO12** |
+| **GPIO13** | GND        |
+| **GPIO19** | **GPIO16** |
+| **GPIO26** | **GPIO20** |
+|        GND | **GPIO21** |
+
+Note that if you have an older Raspberry Pi model you'll only have 26 pins but they have the same layout, starting at the top row (`3V3` and `5V` and ending at `GND` and `GPIO7`).
 
 1. Take the metal paper clips and unfold them to make a straight wire.
 
@@ -12,7 +41,7 @@ To begin to turn a simple jelly baby into a switch, you will attach cables to it
 
 4. Insert the paper clips into a jelly baby so that they are close to each other but not touching.
 
-    The picture above shows the Raspberry Pi GPIO header pins; the diagram above the pins shows the pin numbers. You will be using pin 3 and pin 25.
+    The picture above shows the Raspberry Pi GPIO header pins; the diagram above the pins shows the pin numbers. You will be using `GPIO 4` and any `GND` pin.
 
 5. Take the other end of one of the jumper leads and push it onto pin 3 of the General Purpose Input-Output (GPIO) header which is connected to one of the GPIO channels.
 
@@ -20,15 +49,13 @@ To begin to turn a simple jelly baby into a switch, you will attach cables to it
 
     **Warning:** You can damage your Raspberry Pi if you do not use the GPIO pins correctly!
 
-7. Make sure your Raspberry Pi has an internet connection, and speakers or headphones so that you can hear your jelly baby screaming. If you are using headphones or a speaker on the Raspberry Pi, you will need to run the following command to redirect sound to the headphone socket:
+7. Make sure your Raspberry Pi has an internet connection, and speakers or headphones so that you can hear your jelly baby screaming. If you are using headphones or a speaker on the Raspberry Pi, you will need to type the following command to redirect sound to the headphone socket in the **Terminal**:
 
     `amixer cset numid=3 1`
 
 ## Step 2: Downloading and playing screams!
 
 So far you have created your input device and have your Raspberry Pi set up and running. You now need to download a scream sound file and install some software to be able to play it. This task can be achieved from the command line.
-
-### Activity checklist:
 
 1.  After logging into your Raspberry Pi you will see the following text:
 
@@ -49,7 +76,7 @@ So far you have created your input device and have your Raspberry Pi set up and 
     omxplayer la.mp3
     ```
 
-    ```omxplayer``` will play the downloaded sound file and you should hear it from the speakers or headphones connected to your Pi.
+    `omxplayer` will play the downloaded sound file and you should hear it from the speakers or headphones connected to your Pi.
 
     If you cannot hear anything, make sure that your headphones or speakers are connected correctly.  If the jack/plug looks like the picture below (notice the three black bands) you may find that it will only work if you pull the plug out by a few millimetres.
 
@@ -59,7 +86,6 @@ So far you have created your input device and have your Raspberry Pi set up and 
 
 The final step to make your jelly baby scream is to write a program in Python; it will detect when you press the jelly baby input device and output the scream sound.
 
-### Activity checklist:
 
 1. To write your Python program you will need to open a text editor window from the command line. To do this type the following command:
 
@@ -80,7 +106,7 @@ The final step to make your jelly baby scream is to write a program in Python; i
 3. Now you will need to set up the GPIO pins to use GPIO board pin numbers. Leave a line empty by pressing Enter on your keyboard, then type:
 
     ```python
-    GPIO.setmode(GPIO.BOARD)
+    GPIO.setmode(GPIO.BCM)
     ```
     
 4. To switch off the "Ports already in use" warnings, press Enter to give you a new line and type:
@@ -92,14 +118,14 @@ The final step to make your jelly baby scream is to write a program in Python; i
 5. Set pin 3 on the GPIO header to be an input with the following command:
 
     ```python
-    GPIO.setup(3,GPIO.IN)
+    GPIO.setup(4,GPIO.IN)
     ```
     
 6. Create a loop that runs forever and plays the screaming sound file when the two wires inside the jelly baby are touching by typing the following:
 
     ```python
     while True:
-        if GPIO.input(3) == False:
+        if GPIO.input(4) == False:
             os.system('omxplayer la.mp3')
             time.sleep(1);
     ```
@@ -116,18 +142,9 @@ The final step to make your jelly baby scream is to write a program in Python; i
 
 9. Exit the program when you are finished by pressing `CTRL+C`.
 
-## Things to try:
+## What's next?
 
 - Using a real button or switch connected to a breadboard
 - Changing the sound that plays when the device is pressed
 - Can you think of a way to use more inputs?
 
-## Licence
-
-Unless otherwise specified, everything in this repository is covered by the following licence:
-
-![Creative Commons License](http://i.creativecommons.org/l/by-sa/4.0/88x31.png)
-
-***Screaming Jelly Baby*** by the [Raspberry Pi Foundation](http://raspberrypi.org) is licenced under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
-
-Based on a work at https://github.com/raspberrypilearning/screaming-jellybaby
