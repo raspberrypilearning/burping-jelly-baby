@@ -1,12 +1,6 @@
 - name: Speakers or headphones
-  img: speakers
+  img: speakers-headphones
   url: http://thepihut.com/products/mini-portable-speaker-for-the-raspberry-pi
-- name: 2 x metal paperclips or dress pins
-  img: metal-paperclips
-  url:
 - name: 2 x female-to-female jumper wires
-  img: female-to-female-jumper-wires
+  img: jumper-female-to-female
   url: http://shop.pimoroni.com/products/jumper-jerky
-- name: A jelly baby
-  img: jelly-baby
-  url:
