@@ -80,7 +80,7 @@ So far you have created your input device and have your Raspberry Pi set up and 
 
     If you cannot hear anything, make sure that your headphones or speakers are connected correctly.  If the jack/plug looks like the picture below (notice the three black bands) you may find that it will only work if you pull the plug out by a few millimetres.
 
-    ![](./images/3-5mmjack.jpg)
+    ![](images/3-5mmjack.jpg)
 
 ## Step 3: Write a program in Python
 
