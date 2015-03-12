@@ -41,7 +41,7 @@ Note that if you have an older Raspberry Pi model you'll only have 26 pins but t
 
 4. Insert the paper clips into a jelly baby so that they are close to each other but not touching.
 
-    The picture above shows the Raspberry Pi GPIO header pins; the diagram above the pins shows the pin numbers. You will be using `GPIO 4` and any `GND` pin.
+    The picture above shows the Raspberry Pi GPIO header pins; the diagram above the pins shows the pin numbers. You will be using `GPIO 3` and any `GND` pin.
 
 5. Take the other end of one of the jumper leads and push it onto pin 3 of the General Purpose Input-Output (GPIO) header which is connected to one of the GPIO channels.
 
@@ -49,7 +49,7 @@ Note that if you have an older Raspberry Pi model you'll only have 26 pins but t
 
     **Warning:** You can damage your Raspberry Pi if you do not use the GPIO pins correctly!
 
-7. Make sure your Raspberry Pi has an internet connection, and speakers or headphones so that you can hear your jelly baby screaming. If you are using headphones or a speaker on the Raspberry Pi, you will need to type the following command to redirect sound to the headphone socket in the **Terminal**:
+7. Make sure your Raspberry Pi has an internet connection, and speakers or headphones so that you can hear your jelly baby screaming. If you are using headphones or a speaker on the Raspberry Pi, you will need to type the following command to redirect sound to the headphone socket in the **Terminal** which can be opened by clicking on **Menu** and then **Accessories**:
 
     `amixer cset numid=3 1`
 
