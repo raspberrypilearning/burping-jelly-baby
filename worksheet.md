@@ -100,7 +100,7 @@ The final step to make your jelly baby scream is to write a program in Python; i
 
 1. Once idle3 has opened, click on **File** and **New Window**. This will open a blank file. Click on **File** and **Save As** and name the file `burp.py`
 
-2. Begin your program by importing the modules and libraries needed to make it work. Type the following:
+1. Begin your program by importing the modules and libraries needed to make it work. Type the following:
 
     ```python
     import time
@@ -108,50 +108,54 @@ The final step to make your jelly baby scream is to write a program in Python; i
     import pygame.mixer
     ```
 
-    The time library will be used to make the program pause for a fixed amount of time. The Raspberry Pi GPIO libraries will be used to connect the Raspberry Pi to other physical devices via the General Purpose Input-Output (GPIO) pins, in this case your jelly baby input device! The `os` library will be used to allow our program to call other programs that run on the Raspberry Pi like `omxplayer`.
+    The time library will be used to make the program pause for a fixed amount of time. The Raspberry Pi GPIO libraries will be used to connect the Raspberry Pi to other physical devices via the General Purpose Input-Output (GPIO) pins, in this case your jelly baby input device! The `pygame.mixer` library will be used to play the burp sound.
 
-3. Now you will need to set up the GPIO pins to use GPIO board pin numbers. Leave a line empty by pressing Enter on your keyboard, then type:
+1. Now you will need to set up the GPIO pins to use GPIO board pin numbers. Leave a line empty by pressing Enter on your keyboard, then type:
 
     ```python
     GPIO.setmode(GPIO.BCM)
     ```
     
-4. To switch off the "Ports already in use" warnings, press Enter to give you a new line and type:
+1. To switch off the "Ports already in use" warnings, press Enter to give you a new line and type:
 
     ```python
     GPIO.setwarnings(False)
     ```
     
-5. Set pin 3 on the GPIO header to be an input with the following command:
+1. Set pin 3 on the GPIO header to be an input with the following command:
 
     ```python
-    GPIO.setup(4,GPIO.IN)
+    GPIO.setup(3,GPIO.IN)
     ```
     
-6. Create a loop that runs forever and plays the screaming sound file when the two wires inside the jelly baby are touching by typing the following:
+1. Now add a command to initialise the application to play the sound file and create a variable called burp:
+   
+   ```python
+   pygame.mixer.init()
+   
+   burp = pygame.mixer.Sound("burp.wav")
+   ```
+   Here you are storing the instruction to play the burp sound file in the word `burp`. Note that capital letters and lower case letters are important in python, so make sure that the `S` in `Sound` is a capital or your code will not work.
+
+1. Create a loop that runs forever and plays the screaming sound file when the two wires inside the jelly baby are touching by typing the following:
 
     ```python
     while True:
-        if GPIO.input(4) == False:
-            os.system('omxplayer la.mp3')
-            time.sleep(1);
+        if GPIO.input(3) == False:
+            play.burp()
+            time.sleep(1)
     ```
 
-7. Save the file by pressing `CTRL+X`, then `Y` for yes, followed by `Enter`.
+1. Save the file by clicking on **File** and **Save**.
 
-8. Finally, run the program by typing:
+1. Finally, run the program by clicking on **Run** and **Run Module**
 
-    ```
-    sudo python scream.py
-    ```
+    **Congratulations!** Now when you press the jelly baby, the wires will touch and the burp sound file will play.
 
-    **Congratulations!** Now when you press the jelly baby, the wires will touch and the mp3 file will play.
-
-9. Exit the program when you are finished by pressing `CTRL+C`.
 
 ## What's next?
 
 - Using a real button or switch connected to a breadboard
 - Changing the sound that plays when the device is pressed
-- Can you think of a way to use more inputs?
+- Why not create a whole music box with our [GPIO Music Box tutorial](). 
 
