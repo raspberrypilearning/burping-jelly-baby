@@ -1,4 +1,8 @@
-## Step 1: Wire up a jelly baby
+# Screaming Jelly Baby
+
+Make a Jelly Baby scream by pressing it!
+
+## Wire up a jelly baby
 
 To begin to turn a simple jelly baby into a switch, you will attach cables to it and then connect them to the GPIO pins on a Raspberry Pi.
 
@@ -55,7 +59,7 @@ Note that if you have an older Raspberry Pi model you'll only have 26 pins but t
 
     `amixer cset numid=3 1`
 
-## Step 2: Downloading and playing screams!
+## Downloading and playing screams!
 
 So far you have created your input device and have your Raspberry Pi set up and running. You now need to find a burping sound file and move it into a new folder. This can all be achieved in a **Terminal** window:
 
@@ -89,7 +93,7 @@ So far you have created your input device and have your Raspberry Pi set up and 
 
     ![](images/3-5mmjack.jpg)
 
-## Step 3: Write a program in Python
+## Write a program in Python
 
 The final step to make your jelly baby scream is to write a program in Python; it will detect when you press the jelly baby input device and output the scream sound.
 
