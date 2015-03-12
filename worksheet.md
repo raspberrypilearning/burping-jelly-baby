@@ -107,10 +107,10 @@ The final step to make your jelly baby scream is to write a program in Python; i
     ```python
     import time
     import RPi.GPIO as GPIO
-    import pygame.mixer
+    import os
     ```
 
-    The time library will be used to make the program pause for a fixed amount of time. The Raspberry Pi GPIO libraries will be used to connect the Raspberry Pi to other physical devices via the General Purpose Input-Output (GPIO) pins, in this case your jelly baby input device! The `pygame.mixer` library will be used to play the burp sound.
+    The time library will be used to make the program pause for a fixed amount of time. The Raspberry Pi GPIO libraries will be used to connect the Raspberry Pi to other physical devices via the General Purpose Input-Output (GPIO) pins, in this case your jelly baby input device! The `os` library will allow you to play the burp sound in `omxplayer` but this time from within your code.
 
 1. Now you will need to set up the GPIO pins to use GPIO board pin numbers. Leave a line empty by pressing Enter on your keyboard, then type:
 
@@ -129,22 +129,13 @@ The final step to make your jelly baby scream is to write a program in Python; i
     ```python
     GPIO.setup(3,GPIO.IN)
     ```
-    
-1. Now add a command to initialise the application to play the sound file and create a variable called burp:
-   
-   ```python
-   pygame.mixer.init()
-   
-   burp = pygame.mixer.Sound("burp.wav")
-   ```
-   Here you are storing the instruction to play the burp sound file in the word `burp`. Note that capital letters and lower case letters are important in python, so make sure that the `S` in `Sound` is a capital or your code will not work.
 
 1. Create a loop that runs forever and plays the screaming sound file when the two wires inside the jelly baby are touching by typing the following:
 
     ```python
     while True:
         if GPIO.input(3) == False:
-            play.burp()
+            os.system("omxplayer burp.wav")
             time.sleep(1)
     ```
 
@@ -159,5 +150,5 @@ The final step to make your jelly baby scream is to write a program in Python; i
 
 - Using a real button or switch connected to a breadboard
 - Changing the sound that plays when the device is pressed
-- Why not create a whole music box with our [GPIO Music Box tutorial](). 
+- Why not create a whole music box with our [GPIO Music Box tutorial](http://www.raspberrypi.org/learning/gpio-music-box/). 
 
