@@ -49,31 +49,36 @@ Note that if you have an older Raspberry Pi model you'll only have 26 pins but t
 
     **Warning:** You can damage your Raspberry Pi if you do not use the GPIO pins correctly!
 
-7. Make sure your Raspberry Pi has an internet connection, and speakers or headphones so that you can hear your jelly baby screaming. If you are using headphones or a speaker on the Raspberry Pi, you will need to type the following command to redirect sound to the headphone socket in the **Terminal** which can be opened by clicking on **Menu** and then **Accessories**:
+7. Make sure your Raspberry Pi has speakers or headphones so that you can hear your jelly baby burping. If you are using headphones or a speaker on the Raspberry Pi, you will need to type the following command to redirect sound to the headphone socket in the **Terminal** which can be opened by clicking on **Menu** and then **Accessories**:
 
     `amixer cset numid=3 1`
 
 ## Step 2: Downloading and playing screams!
 
-So far you have created your input device and have your Raspberry Pi set up and running. You now need to download a scream sound file and install some software to be able to play it. This task can be achieved from the command line.
+So far you have created your input device and have your Raspberry Pi set up and running. You now need to find a burping sound file and move it into a new folder. This can all be achieved in a **Terminal** window:
 
-1.  After logging into your Raspberry Pi you will see the following text:
+1. Create a new folder called `jellybaby` with the following command:
 
+    ```bash
+    mkdir jellybaby
     ```
-    pi@raspberry ~ $
-    ```
-    The Raspberry Pi is waiting for you to type in a command to do something. This is referred to as the command line.
 
-2.  Download an mp3 sound effect to play when the jelly baby is pressed. Enter the following command; it should be typed on one line with the same uppercase and lowercase characters:
+1. Enter the folder with `cd jellybaby`
 
+    We're going to need a burping sample sound file for this project so we'll use one from Sonic Pi.
+
+1. Make a copy of Sonic Pi's sound samples folder with the following command:
+
+    ```bash
+    cp /opt/sonic-pi/etc/samples/misc_burp.wav burp.wav
     ```
-    wget http://goo.gl/MOXGX3 -O la.mp3 --no-check-certificate
-    ```
+
+    This will copy the misc_burp sound file from the sonic-pi folder into the jellybaby folder and rename it to burp.wav.
 
 3.  Now test that you can play the sound file using `omxplayer` by typing:
 
     ```
-    omxplayer la.mp3
+    omxplayer burp.wav
     ```
 
     `omxplayer` will play the downloaded sound file and you should hear it from the speakers or headphones connected to your Pi.
@@ -87,18 +92,20 @@ So far you have created your input device and have your Raspberry Pi set up and 
 The final step to make your jelly baby scream is to write a program in Python; it will detect when you press the jelly baby input device and output the scream sound.
 
 
-1. To write your Python program you will need to open a text editor window from the command line. To do this type the following command:
+1. To write your Python program you will need to open the python programming environment **IDLE3** from the command line. To do this type the following command:
 
     ```
-    nano scream.py
+    sudo idle3 &
     ```
 
-2. Begin your program by importing the modules and libraries needed to make it work. Type the following command:
+1. Once idle3 has opened, click on **File** and **New Window**. This will open a blank file. Click on **File** and **Save As** and name the file `burp.py`
+
+2. Begin your program by importing the modules and libraries needed to make it work. Type the following:
 
     ```python
     import time
     import RPi.GPIO as GPIO
-    import os
+    import pygame.mixer
     ```
 
     The time library will be used to make the program pause for a fixed amount of time. The Raspberry Pi GPIO libraries will be used to connect the Raspberry Pi to other physical devices via the General Purpose Input-Output (GPIO) pins, in this case your jelly baby input device! The `os` library will be used to allow our program to call other programs that run on the Raspberry Pi like `omxplayer`.
