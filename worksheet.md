@@ -87,7 +87,7 @@ So far you have created your input device and have your Raspberry Pi set up and 
     omxplayer burp.wav
     ```
 
-    `omxplayer` will play the downloaded sound file and you should hear it from the speakers or headphones connected to your Pi.
+    `omxplayer` will play the burp sound file and you should hear it from the speakers or headphones connected to your Pi.
 
     If you cannot hear anything, make sure that your headphones or speakers are connected correctly.  If the jack/plug looks like the picture below (notice the three black bands) you may find that it will only work if you pull the plug out by a few millimetres.
 
@@ -134,7 +134,7 @@ The final step to make your jelly baby burp is to write a program in Python; it 
     GPIO.setup(3,GPIO.IN)
     ```
 
-1. Create a loop that runs forever and plays the screaming sound file when the two wires inside the jelly baby are touching by typing the following:
+1. Create a loop that runs forever and plays the burping sound file when the two wires inside the jelly baby are touching by typing the following:
 
     ```python
     while True:
