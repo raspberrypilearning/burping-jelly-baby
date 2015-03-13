@@ -49,17 +49,17 @@ Note that if you have an older Raspberry Pi model you'll only have 26 pins but t
     
     *Note that you will be only able to have one burping jellybaby button. Only use GPIO 3 and GND for this tutorial.*
 
-5. Take the other end of one of the jumper leads and push it onto pin 3 of the General Purpose Input-Output (GPIO) header which is connected to one of the GPIO channels.
+5. Take the other end of one of the jumper leads and push it onto `GPIO 3` of the General Purpose Input-Output (GPIO) header which is connected to one of the GPIO channels.
 
-6. Take the end of the other jumper lead and push it onto pin 25 of the GPIO header which is connected to ground.
+6. Take the end of the other jumper lead and push it onto the pin next to `GPIO 3` labelled `GND`.
 
-    **Warning:** You can damage your Raspberry Pi if you do not use the GPIO pins correctly!
+    **Warning:** You can damage your Raspberry Pi if you do not use the GPIO pins correctly! 
 
 7. Make sure your Raspberry Pi has speakers or headphones so that you can hear your jelly baby burping. If you are using headphones or a speaker on the Raspberry Pi, you will need to type the following command to redirect sound to the headphone socket in the **Terminal** which can be opened by clicking on **Menu** and then **Accessories**:
 
     `amixer cset numid=3 1`
 
-## Downloading and playing screams!
+## Sound of a burp!
 
 So far you have created your input device and have your Raspberry Pi set up and running. You now need to find a burping sound file and move it into a new folder. This can all be achieved in a **Terminal** window:
 
@@ -73,13 +73,13 @@ So far you have created your input device and have your Raspberry Pi set up and 
 
     We're going to need a burping sample sound file for this project so we'll use one from Sonic Pi.
 
-1. Make a copy of Sonic Pi's sound samples folder with the following command:
+1. Make a copy of Sonic Pi's sound of a burp with the following command:
 
     ```bash
     cp /opt/sonic-pi/etc/samples/misc_burp.wav burp.wav
     ```
 
-    This will copy the misc_burp sound file from the sonic-pi folder into the jellybaby folder and rename it to burp.wav.
+    This will copy the misc_burp sound file from the sonic-pi folder into the jellybaby folder and rename it to burp.wav
 
 3.  Now test that you can play the sound file using `omxplayer` by typing:
 
@@ -95,7 +95,7 @@ So far you have created your input device and have your Raspberry Pi set up and 
 
 ## Write a program in Python
 
-The final step to make your jelly baby scream is to write a program in Python; it will detect when you press the jelly baby input device and output the scream sound.
+The final step to make your jelly baby burp is to write a program in Python; it will detect when you press the jelly baby input device and output the burp sound.
 
 
 1. To write your Python program you will need to open the python programming environment **IDLE3** from the command line. To do this type the following command:
@@ -128,7 +128,7 @@ The final step to make your jelly baby scream is to write a program in Python; i
     GPIO.setwarnings(False)
     ```
     
-1. Set pin 3 on the GPIO header to be an input with the following command:
+1. Set `GPIO 3` on the GPIO header to be an input with the following command:
 
     ```python
     GPIO.setup(3,GPIO.IN)
