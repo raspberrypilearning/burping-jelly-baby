@@ -1,6 +1,6 @@
-# Screaming Jelly Baby
+# Burping Jelly Baby
 
-Make a Jelly Baby scream by pressing it!
+Make a Jelly Baby burp by pressing it!
 
 ## Wire up a jelly baby
 
