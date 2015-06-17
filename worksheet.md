@@ -8,9 +8,9 @@ To begin to turn a simple jelly baby into a switch, you will attach cables to it
 
 1. Looking at the following GPIO diagram, comapre it to your Raspberry Pi. 
 
-    *GPIO stands for **General Purpose Input Output**. It is a way in which the Raspberry Pi can control and monitor the outside world by being connected to electronic circuits.  The Pi is able to control LEDs, turning them on or off, or motors, or many other things.  It is also able to detect whether a switch has been pressed, or temperature, or light.*
+   GPIO stands for **General Purpose Input Output**. It is a way in which the Raspberry Pi can control and monitor the outside world by being connected to electronic circuits.  The Pi is able to control LEDs, or motors, or many other things.  It is also able to detect whether or not a switch has been pressed.
 
-    You'll be using a single ground pin (marked `GND`) and a GPIO pin (marked `GPIO`):
+   You'll be using a single ground pin (marked `GND`) and a GPIO pin (marked `GPIO`):
 
 |            |            |
 |-----------:|:-----------|
@@ -45,15 +45,15 @@ Note that if you have an older Raspberry Pi model you'll only have 26 pins but t
 
 4. Insert the paper clips into a jelly baby so that they are close to each other but not touching.
 
-    The picture above shows the Raspberry Pi GPIO header pins; the diagram above the pins shows the pin numbers. You will be using `GPIO 3` and any `GND` pin. 
+   The picture above shows the Raspberry Pi GPIO header pins; the diagram above the pins shows the pin numbers. You will be using `GPIO 3` and any `GND` pin. 
     
-    *Note that you will be only able to have one burping jellybaby button. Only use GPIO 3 and GND for this tutorial.*
+   Note that you will be only able to have one burping jellybaby button. Only use GPIO 3 and GND for this tutorial.
 
 5. Take the other end of one of the jumper leads and push it onto `GPIO 3` of the General Purpose Input-Output (GPIO) header which is connected to one of the GPIO channels.
 
 6. Take the end of the other jumper lead and push it onto the pin next to `GPIO 3` labelled `GND`.
 
-    **Warning:** You can damage your Raspberry Pi if you do not use the GPIO pins correctly! 
+   **Warning:** You can damage your Raspberry Pi if you do not use the GPIO pins correctly! 
 
 7. Make sure your Raspberry Pi has speakers or headphones so that you can hear your jelly baby burping. If you are using headphones or a speaker on the Raspberry Pi, you will need to type the following command to redirect sound to the headphone socket in the **Terminal** which can be opened by clicking on **Menu** and then **Accessories**:
 
