@@ -1,10 +1,10 @@
 # Burping Jelly Baby
 
-Make a Jelly Baby burp by pressing it!
+Make a jelly baby burp by pressing it!
 
 ## Wire up a jelly baby
 
-To begin to turn a simple jelly baby into a switch, you will attach cables to it and then connect them to the GPIO pins on a Raspberry Pi.
+To turn a simple jelly baby into a switch, you will attach cables to it and then connect them to the GPIO pins on a Raspberry Pi.
 
 1. Looking at the following GPIO diagram, comapre it to your Raspberry Pi. 
 
@@ -37,7 +37,7 @@ To begin to turn a simple jelly baby into a switch, you will attach cables to it
 
 Note that if you have an older Raspberry Pi model you'll only have 26 pins but they have the same layout, starting at the top row (`3V3` and `5V` and ending at `GND` and `GPIO7`).
 
-1. Take the metal paper clips and unfold them to make a straight wire.
+1. Take the metal paper clips (or pins if you are using them) and unfold them to make a straight wire.
 
 2. Take a female to female jumper cable and push the paper clip wire into one of the ends.
 
@@ -134,7 +134,7 @@ The final step to make your jelly baby burp is to write a program in Python; it 
     GPIO.setup(3,GPIO.IN)
     ```
 
-1. Create a loop that runs forever and plays the screaming sound file when the two wires inside the jelly baby are touching by typing the following:
+1. Create a loop that runs forever and plays the burping sound file when the two wires inside the jelly baby are touching by typing the following:
 
     ```python
     while True:
