@@ -47,7 +47,7 @@ Note that if you have an older Raspberry Pi model you'll only have 26 pins but t
 
    The picture above shows the Raspberry Pi GPIO header pins; the diagram above the pins shows the pin numbers. You will be using `GPIO 3` and any `GND` pin. 
     
-   Note that you will be only able to have one burping jellybaby button. Only use GPIO 3 and GND for this tutorial.
+   Note that you will be only able to have one burping jelly baby button. Only use GPIO 3 and GND for this tutorial.
 
 5. Take the other end of one of the jumper leads and push it onto `GPIO 3` of the General Purpose Input-Output (GPIO) header which is connected to one of the GPIO channels.
 
@@ -114,7 +114,7 @@ The final step to make your jelly baby burp is to write a program in Python; it 
     import os
     ```
 
-    The time library will be used to make the program pause for a fixed amount of time. The Raspberry Pi GPIO libraries will be used to connect the Raspberry Pi to other physical devices via the General Purpose Input-Output (GPIO) pins, in this case your jelly baby input device! The `os` library will allow you to play the burp sound in `omxplayer` but this time from within your code.
+ The time library will be used to make the program pause for a fixed amount of time. The Raspberry Pi GPIO libraries will be used to connect the Raspberry Pi to other physical devices via the General Purpose Input-Output (GPIO) pins, in this case your jelly baby input device! The `os` library will allow you to play the burp sound in `omxplayer` but this time from within your code.
 
 1. Now you will need to set up the GPIO pins to use GPIO board pin numbers. Leave a line empty by pressing Enter on your keyboard, then type:
 
