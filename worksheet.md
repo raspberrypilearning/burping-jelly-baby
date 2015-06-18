@@ -104,7 +104,7 @@ The final step to make your jelly baby burp is to write a program in Python; it 
     sudo idle3 &
     ```
 
-1. Once idle3 has opened, click on **File** and **New Window**. This will open a blank file. Click on **File** and **Save As** and name the file `burp.py`
+1. Once IDLE3 has opened, click on **File** and **New Window**. This will open a blank file. Click on **File** and **Save As** and name the file `burp.py`
 
 1. Begin your program by importing the modules and libraries needed to make it work. Type the following:
 
