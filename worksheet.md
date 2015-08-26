@@ -6,7 +6,7 @@ Make a jelly baby burp by pressing it!
 
 To turn a simple jelly baby into a switch, you will attach cables to it and then connect them to the GPIO pins on a Raspberry Pi.
 
-1. Looking at the following GPIO diagram, comapre it to your Raspberry Pi. 
+1. Looking at the following GPIO diagram, compare it to your Raspberry Pi. 
 
    GPIO stands for **General Purpose Input Output**. It is a way in which the Raspberry Pi can control and monitor the outside world by being connected to electronic circuits.  The Pi is able to control LEDs, or motors, or many other things.  It is also able to detect whether or not a switch has been pressed.
 
