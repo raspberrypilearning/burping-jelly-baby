@@ -45,7 +45,7 @@ Note that if you have an older Raspberry Pi model you'll only have 26 pins but t
 
 4. Insert the paper clips into a jelly baby so that they are close to each other but not touching.
 
-   The picture above shows the Raspberry Pi GPIO header pins; the diagram above the pins shows the pin numbers. You will be using `GPIO 3` and any `GND` pin. 
+   The diagram above the pins shows the GPIO pin numbers. You will be using `GPIO 3` and any `GND` pin. 
     
    Note that you will be only able to have one burping jelly baby button. Only use GPIO 3 and GND for this tutorial.
 
