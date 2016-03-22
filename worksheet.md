@@ -6,7 +6,7 @@ Make a jelly baby burp by pressing it!
 
 To turn a simple jelly baby into a switch, you will attach cables to it and then connect them to the GPIO pins on a Raspberry Pi.
 
-1. Looking at the following GPIO diagram, comapre it to your Raspberry Pi. 
+1. Looking at the following GPIO diagram, compare it to your Raspberry Pi. 
 
    GPIO stands for **General Purpose Input Output**. It is a way in which the Raspberry Pi can control and monitor the outside world by being connected to electronic circuits.  The Pi is able to control LEDs, or motors, or many other things.  It is also able to detect whether or not a switch has been pressed.
 
@@ -45,7 +45,7 @@ Note that if you have an older Raspberry Pi model you'll only have 26 pins but t
 
 4. Insert the paper clips into a jelly baby so that they are close to each other but not touching.
 
-   The picture above shows the Raspberry Pi GPIO header pins; the diagram above the pins shows the pin numbers. You will be using `GPIO 3` and any `GND` pin. 
+   The diagram above the pins shows the GPIO pin numbers. You will be using `GPIO 3` and any `GND` pin. 
     
    Note that you will be only able to have one burping jelly baby button. Only use GPIO 3 and GND for this tutorial.
 
@@ -87,7 +87,7 @@ So far you have created your input device and have your Raspberry Pi set up and 
     omxplayer burp.wav
     ```
 
-    `omxplayer` will play the downloaded sound file and you should hear it from the speakers or headphones connected to your Pi.
+    `omxplayer` will play the sound file and you should hear it from the speakers or headphones connected to your Pi.
 
     If you cannot hear anything, make sure that your headphones or speakers are connected correctly.  If the jack/plug looks like the picture below (notice the three black bands) you may find that it will only work if you pull the plug out by a few millimetres.
 
