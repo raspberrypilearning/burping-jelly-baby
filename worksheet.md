@@ -104,7 +104,7 @@ The final step to make your jelly baby burp is to write a program in Python; it 
     sudo idle3 &
     ```
 
-1. Once IDLE3 has opened, click on **File** and **New Window**. This will open a blank file. Click on **File** and **Save As** and name the file `burp.py`
+1. Once IDLE3 has opened, click on **File** and **New File**. This will open a blank file. Click on **File** and **Save As** and name the file `burp.py`
 
 1. Begin your program by importing the modules and libraries needed to make it work. Type the following:
 
@@ -114,7 +114,7 @@ The final step to make your jelly baby burp is to write a program in Python; it 
     import os
     ```
 
- The time library will be used to make the program pause for a fixed amount of time. The Raspberry Pi GPIO libraries will be used to connect the Raspberry Pi to other physical devices via the General Purpose Input-Output (GPIO) pins, in this case your jelly baby input device! The `os` library will allow you to play the burp sound in `omxplayer` but this time from within your code.
+ The time library will be used to make the program pause for a fixed amount of time. The Raspberry Pi GPIO libraries will be used to connect the Raspberry Pi to other physical devices via the General Purpose Input-Output (GPIO) pins, in this case your jelly baby input device! The `os` library will allow you to play the burp sound in `omxplayer`, but this time from within your code.
 
 1. Now you will need to set up the GPIO pins to use GPIO board pin numbers. Leave a line empty by pressing Enter on your keyboard, then type:
 
