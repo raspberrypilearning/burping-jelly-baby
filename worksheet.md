@@ -1,6 +1,6 @@
 # Burping Jelly Baby
 
-In this resource, you can make a jelly baby burp when ever you give it a squeeze.
+In this resource, you can make a jelly baby burp whenever you give it a squeeze.
 
 To turn a simple jelly baby into a switch, you will attach cables to it and then connect them to the GPIO pins on a Raspberry Pi.
 
@@ -8,7 +8,7 @@ To turn a simple jelly baby into a switch, you will attach cables to it and then
 
 There are 40 pins on the Raspberry Pi (26 pins on early models), and they provide various different functions.
 
-If you have a RasPiO pin label, it can help to identify what each pin is used for. Make sure your pin label is placed with the keyring hole facing the USB ports, pointed outwards.
+If you have a RasPiO pin label, it can help to identify what each pin is used for. Make sure your pin label is placed with the key-ring hole facing the USB ports, pointed outwards.
 
 ![](images/raspio-ports.jpg)
 
@@ -40,7 +40,7 @@ You'll see pins labelled as 3V3, 5V, GND and GP2, GP3, etc:
 
 ## Sound of a burp!
 
-So far you have created your input device and have your Raspberry Pi set up and running. You now need to find a burping sound file and move it into a new folder. This can all be achieved in a **Terminal** window:
+So far you have created your input device and have your Raspberry Pi set up and running. You now need to find a burping sound file and move it into a new folder. This can all be achieved in a **Terminal** window, which can be opened by pressing `ctrl` + `alt` + `t`.
 
 1. Create a new folder called `jellybaby` with the following command:
 
@@ -50,7 +50,7 @@ So far you have created your input device and have your Raspberry Pi set up and 
 
 1. Enter the folder with `cd jellybaby`
 
-    We're going to need a burping sample sound file for this project so we'll use one from Sonic Pi.
+    We're going to need a *burping* sample sound file for this project so we'll use one from Sonic Pi.
 
 1. Make a copy of Sonic Pi's sound of a burp with the following command:
 
@@ -77,7 +77,6 @@ So far you have created your input device and have your Raspberry Pi set up and 
 ## Write a program in Python
 
 The final step to make your jelly baby burp is to write a program in Python; it will detect when you press the jelly baby input device and output the burp sound.
-
 
 1. Go to `Menu` > `Programming` > `Python 3 (IDLE)`
 
