@@ -6,15 +6,25 @@ To turn a simple jelly baby into a switch, you will attach cables to it and then
 
 ## Raspberry Pi GPIO pins
 
-1. The image below shows a RasPiO pin label, that can help to identify what each pin on the Raspberry Pi is used for, but if you don't have one then you can use the image as a guide to the Raspberry Pi GPIO pins.
+There are 40 pins on the Raspberry Pi (26 pins on early models), and they provide various different functions.
 
-![gpio label](images/raspio-ports.jpg)
+If you have a RasPiO pin label, it can help to identify what each pin is used for. Make sure your pin label is placed with the keyring hole facing the USB ports, pointed outwards.
 
-1. The pins labelled with `GP` before a number are the GPIO pins. So `GPIO 17`, for instance, is labelled `GP17`. GPIO pins can be used to output 3.3 volts, or they can be used to detect high or low voltages.
+![](images/raspio-ports.jpg)
 
-1. There are two pins labelled `3V3` both of which provide power at **3.3 volts**. There are also two pins labelled `5V` that provide power at **5 volts**.
+If you don't have a pin label, then this guide can help you to identify the pin numbers:
 
-1. There are also 8 pins labelled `GND` which stands for **ground**.
+![](images/pinout.png)
+
+You'll see pins labelled as 3V3, 5V, GND and GP2, GP3, etc:
+
+|   |   |   |
+|---|---|---|
+| 3V3 | 3.3 volts | Anything connected to these pins will always get 3.3V of power |
+| 5V | 5 volts | Anything connected to these pins will always get 5V of power |
+| GND | ground | Zero volts, used to complete a circuit |
+| GP2 | GPIO pin 2 | These pins are for general-purpose use and can be configured as input or output pins |
+| ID_SC/ID_SD/DNC | Special purpose pins ||
 
 ## Wiring up the Jelly Baby
 
@@ -99,13 +109,13 @@ The final step to make your jelly baby burp is to write a program in Python; it 
     ```
 1. Lastly you can use an infinite loop to wait for the jelly baby to be pushed and then play the sound.
 
-``` python
-while True:
-    button.wait_for_press()
-    burp.play()
-    sleep(2)
-    burp.stop()
-```
+    ``` python
+    while True:
+        jelly_baby.wait_for_press()
+        burp.play()
+        sleep(2)
+        burp.stop()
+    ```
 
 1. Save the file by clicking on **File** and **Save**.
 
