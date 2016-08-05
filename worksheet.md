@@ -125,7 +125,7 @@ The final step to make your jelly baby burp is to write a program in Python. The
 
 ## What's next?
 
-- Using a real button or switch connected to a breadboard
-- Changing the sound that plays when the device is pressed
-- Why not create a whole music box with our [GPIO Music Box tutorial](http://www.raspberrypi.org/learning/gpio-music-box/). 
+- Try using a real button or switch connected to a breadboard.
+- Can you change the sound that plays when the device is pressed?
+- You could even create a whole music box with our [GPIO Music Box tutorial](http://www.raspberrypi.org/learning/gpio-music-box/). 
 
