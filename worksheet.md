@@ -16,7 +16,7 @@ If you don't have a pin label, then this guide can help you to identify the pin 
 
 ![](images/pinout.png)
 
-You'll see pins labelled as 3V3, 5V, GND and GP2, GP3, etc:
+You'll see pins labelled as 3V3, 5V, GND, GP2, GP3, and so on:
 
 |   |   |   |
 |---|---|---|
@@ -30,7 +30,7 @@ You'll see pins labelled as 3V3, 5V, GND and GP2, GP3, etc:
 
 1. Take two metal paper clips (or pins if you are using them) and unfold them to make a straight wire.
 
-1. Take a female to female jumper lead and push the paper clip wire into one of the ends.
+1. Take a female-to-female jumper lead and push the paper clip wire into one of the ends.
 
 1. Do the same to the other wire so that you have two identical jumper cables with paper clip wires in one end.
 
@@ -50,7 +50,7 @@ So far you have created your input device and have your Raspberry Pi set up and 
 
 1. Enter the folder with `cd jellybaby`
 
-    We're going to need a *burping* sample sound file for this project so we'll use one from Sonic Pi.
+    We're going to need a burping sample sound file for this project so we'll use one from Sonic Pi.
 
 1. Make a copy of Sonic Pi's sound of a burp with the following command:
 
