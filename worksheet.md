@@ -6,7 +6,7 @@ To turn a simple jelly baby into a switch, you will attach cables to it and then
 
 ## Raspberry Pi GPIO pins
 
-There are 40 pins on the Raspberry Pi (26 pins on early models), and they provide various different functions.
+There are 40 pins on the Raspberry Pi (26 pins on early models), and they perform various different functions.
 
 If you have a RasPiO pin label, it can help to identify what each pin is used for. Make sure your pin label is placed with the key-ring hole facing the USB ports, pointed outwards.
 
@@ -22,7 +22,7 @@ You'll see pins labelled as 3V3, 5V, GND, GP2, GP3, and so on:
 |---|---|---|
 | 3V3 | 3.3 volts | Anything connected to these pins will always get 3.3V of power |
 | 5V | 5 volts | Anything connected to these pins will always get 5V of power |
-| GND | ground | Zero volts, used to complete a circuit |
+| GND | ground | Zero volts. Used to complete a circuit |
 | GP2 | GPIO pin 2 | These pins are for general-purpose use and can be configured as input or output pins |
 | ID_SC/ID_SD/DNC | Special purpose pins ||
 
@@ -36,7 +36,7 @@ You'll see pins labelled as 3V3, 5V, GND, GP2, GP3, and so on:
 
 1. Insert the paper clips into a jelly baby so that they are close to each other but not touching.
 
-1. Now attach the free ends of the jumper leads into `GPIO 3` and any `GND` pin.
+1. Now attach the free ends of the jumper leads to `GPIO 3` and any `GND` pin.
 
 ## Sound of a burp!
 
@@ -60,7 +60,7 @@ So far you have created your input device and have your Raspberry Pi set up and 
     
     This will copy the misc_burp sound file from the sonic-pi folder into the jellybaby folder and rename it to burp.flac
 
-1. Now you need to convert it to a wav file. To do this you can use `avconv`. In the terminal type:
+1. Now you need to convert it to a .wav file. To do this you can use `avconv`. In the terminal type:
 
     ``` bash
     avconv -i burp.flac burp.wav
@@ -76,7 +76,7 @@ So far you have created your input device and have your Raspberry Pi set up and 
 
 ## Write a program in Python
 
-The final step to make your jelly baby burp is to write a program in Python; it will detect when you press the jelly baby input device and output the burp sound.
+The final step to make your jelly baby burp is to write a program in Python. The program will detect when you press the jelly baby input device and will output the burp sound.
 
 1. Go to `Menu` > `Programming` > `Python 3 (IDLE)`
 
