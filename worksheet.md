@@ -26,21 +26,21 @@ You'll see pins labelled as 3V3, 5V, GND, GP2, GP3, and so on:
 | GP2 | GPIO pin 2 | These pins are for general-purpose use and can be configured as input or output pins |
 | ID_SC/ID_SD/DNC | Special purpose pins ||
 
-## Wiring up the Jelly Baby
+## Wiring up the jelly baby
 
-1. Take two metal paper clips (or pins if you are using them) and unfold them to make a straight wire.
+1. Take two metal paper clips (or pins if you're using them) and unfold them to make a straight wire.
 
 1. Take a female-to-female jumper lead and push the paper clip wire into one of the ends.
 
-1. Do the same to the other wire so that you have two identical jumper cables with paper clip wires in one end.
+1. Do the same to the other wire, so that you have two identical jumper cables with paper clip wires in one end.
 
-1. Insert the paper clips into a jelly baby so that they are close to each other but not touching.
+1. Insert the paper clips into a jelly baby, so that they're close to each other but not touching.
 
 1. Now attach the free ends of the jumper leads to `GPIO 3` and any `GND` pin.
 
 ## Sound of a burp!
 
-So far you have created your input device and have your Raspberry Pi set up and running. You now need to find a burping sound file and move it into a new folder. This can all be achieved in a **Terminal** window, which can be opened by pressing `ctrl` + `alt` + `t`.
+So far, you've created your input device and have your Raspberry Pi set up and running. You now need to find a burping sound file and move it into a new folder. This can all be achieved in a terminal window, which can be opened by pressing `Ctrl` + `Alt` + `T`.
 
 1. Create a new folder called `jellybaby` with the following command:
 
@@ -48,9 +48,9 @@ So far you have created your input device and have your Raspberry Pi set up and 
     mkdir jellybaby
     ```
 
-1. Enter the folder with `cd jellybaby`
+1. Enter the folder with `cd jellybaby`.
 
-    We're going to need a burping sample sound file for this project so we'll use one from Sonic Pi.
+    We're going to need a burping sample sound file for this project, so we'll use one from Sonic Pi.
 
 1. Make a copy of Sonic Pi's sound of a burp with the following command:
 
@@ -58,9 +58,9 @@ So far you have created your input device and have your Raspberry Pi set up and 
     cp /opt/sonic-pi/etc/samples/misc_burp.flac burp.flac
     ```
     
-    This will copy the misc_burp sound file from the sonic-pi folder into the jellybaby folder and rename it to burp.flac
+    This will copy the `misc_burp` sound file from the `sonic-pi` folder into the `jellybaby` folder and rename it to `burp.flac`.
 
-1. Now you need to convert it to a .wav file. To do this you can use `avconv`. In the terminal type:
+1. Now you need to convert it to a .wav file. To do this, you can use `avconv`. In the terminal, type:
 
     ``` bash
     avconv -i burp.flac burp.wav
@@ -76,11 +76,11 @@ So far you have created your input device and have your Raspberry Pi set up and 
 
 ## Write a program in Python
 
-The final step to make your jelly baby burp is to write a program in Python. The program will detect when you press the jelly baby input device and will output the burp sound.
+The final step to make your jelly baby burp is to write a program in Python. The program will detect when you press the jelly baby input device, and will output the burp sound.
 
-1. Go to `Menu` > `Programming` > `Python 3 (IDLE)`
+1. Go to `Menu` > `Programming` > `Python 3 (IDLE)`.
 
-1. Once IDLE3 has opened, click on **File** and **New File**. This will open a blank file. Click on **File** and **Save As** and name the file `burp.py`
+1. Once IDLE 3 has opened, click on **File** and **New File**. This will open a blank file. Click on **File** and **Save As** and name the file `burp.py`.
 
 1. Begin your program by importing the modules and libraries needed to make it work. Type the following:
 
@@ -90,15 +90,15 @@ The final step to make your jelly baby burp is to write a program in Python. The
     from time import sleep
     ```
 
-    This allows you to find out when the button has been pushed using `gpiozero` and allows you to use `pygame` to play a sound. The `time` library is used to pause the program for a while.
+    This allows you to find out when the button has been pushed using `gpiozero`, and allows you to use `pygame` to play a sound. The `time` library is used to pause the program for a while.
     
-1. Next you need to tell your program which GPIO pin the Jelly Baby is attached to.
+1. Next, you need to tell your program which GPIO pin the jelly baby is attached to:
 
     ``` python
     jelly_baby = Button(3)
     ```
 
-1. You also need to initialise `pygame` and import the sound into your program.
+1. You also need to initialise `pygame` and import the sound into your program:
 
     ``` python
     pygame.init()
@@ -106,7 +106,7 @@ The final step to make your jelly baby burp is to write a program in Python. The
 
     burp = pygame.mixer.Sound("burp.wav")
     ```
-1. Lastly you can use an infinite loop to wait for the jelly baby to be pushed and then play the sound.
+1. Lastly, you can use an infinite loop to wait for the jelly baby to be pushed and then play the sound:
 
     ``` python
     while True:
@@ -118,12 +118,12 @@ The final step to make your jelly baby burp is to write a program in Python. The
 
 1. Save the file by clicking on **File** and **Save**.
 
-1. Finally, run the program by clicking on **Run** and **Run Module**
+1. Finally, run the program by clicking on **Run** and **Run Module**.
 
     **Congratulations!** Now when you press the jelly baby, the wires will touch and the burp sound file will play.
 
 
-## What's next?
+## What next?
 
 - Try using a real button or switch connected to a breadboard.
 - Can you change the sound that plays when the device is pressed?
