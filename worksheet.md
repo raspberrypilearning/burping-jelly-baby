@@ -73,21 +73,20 @@ So far you have created your input device and have your Raspberry Pi set up and 
 
     We're going to need a burping sample sound file for this project so we'll use one from Sonic Pi.
 
-1. Make a copy of Sonic Pi's sound of a burp with the following command:
+1. Download a copy of a burp sound effect with the following command:
 
     ```bash
-    cp /opt/sonic-pi/etc/samples/misc_burp.wav burp.wav
+    wget http://rpf.io/burp -O burp.wav
     ```
 
-    This will copy the misc_burp sound file from the sonic-pi folder into the jellybaby folder and rename it to burp.wav
 
-3.  Now test that you can play the sound file using `omxplayer` by typing:
+3.  Now test that you can play the sound file using `aplay` by typing:
 
     ```
-    omxplayer burp.wav
+    aplay burp.wav
     ```
 
-    `omxplayer` will play the sound file and you should hear it from the speakers or headphones connected to your Pi.
+    `aplay` will play the sound file and you should hear it from the speakers or headphones connected to your Pi.
 
     If you cannot hear anything, make sure that your headphones or speakers are connected correctly.  If the jack/plug looks like the picture below (notice the three black bands) you may find that it will only work if you pull the plug out by a few millimetres.
 
@@ -98,11 +97,7 @@ So far you have created your input device and have your Raspberry Pi set up and 
 The final step to make your jelly baby burp is to write a program in Python; it will detect when you press the jelly baby input device and output the burp sound.
 
 
-1. To write your Python program you will need to open the python programming environment **IDLE3** from the command line. To do this type the following command:
-
-    ```
-    sudo idle3 &
-    ```
+1. To write your Python program you will need to open the python 3 programming environment **IDLE3** from the main menu.
 
 1. Once IDLE3 has opened, click on **File** and **New File**. This will open a blank file. Click on **File** and **Save As** and name the file `burp.py`
 
@@ -139,7 +134,7 @@ The final step to make your jelly baby burp is to write a program in Python; it 
     ```python
     while True:
         if GPIO.input(3) == False:
-            os.system("omxplayer burp.wav")
+            os.system("aplay burp.wav")
             time.sleep(1)
     ```
 
