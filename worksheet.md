@@ -66,6 +66,7 @@ So far, you've created your input device and have your Raspberry Pi set up and r
 
     `aplay` will play the sound file and you should hear it from the speakers or headphones connected to your Pi.
 
+
 ## Write a program in Python
 
 The final step to make your jelly baby burp is to write a program in Python. The program will detect when you press the jelly baby input device, and will output the burp sound.
@@ -99,7 +100,7 @@ The final step to make your jelly baby burp is to write a program in Python. The
     burp = pygame.mixer.Sound("burp.wav")
     ```
 1. Lastly, you can use an infinite loop to wait for the jelly baby to be pushed and then play the sound:
-
+pp
     ``` python
     while True:
         jelly_baby.wait_for_press()
