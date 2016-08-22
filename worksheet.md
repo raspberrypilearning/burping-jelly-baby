@@ -50,29 +50,21 @@ So far you have created your input device and have your Raspberry Pi set up and 
 
 1. Enter the folder with `cd jellybaby`
 
-    We're going to need a *burping* sample sound file for this project so we'll use one from Sonic Pi.
+    We're going to need a *burping* sample sound file for this project. You could find your own one online, or use the one provided in the next step.
 
-1. Make a copy of Sonic Pi's sound of a burp with the following command:
+1. Download a copy of a burp sound effect with the following command:
 
     ```bash
-    cp /opt/sonic-pi/etc/samples/misc_burp.flac burp.flac
-    ```
-    
-    This will copy the misc_burp sound file from the sonic-pi folder into the jellybaby folder and rename it to burp.flac
-
-1. Now you need to convert it to a wav file. To do this you can use `avconv`. In the terminal type:
-
-    ``` bash
-    avconv -i burp.flac burp.wav
+    wget http://rpf.io/burp -O burp.wav
     ```
 
-3.  Now test that you can play the sound file using `omxplayer` by typing:
+1.  Now test that you can play the sound file using `aplay` by typing:
 
     ```
-    omxplayer burp.wav
+    aplay burp.wav
     ```
 
-`omxplayer` will play the sound file and you should hear it from the speakers or headphones connected to your Pi.
+    `aplay` will play the sound file and you should hear it from the speakers or headphones connected to your Pi.
 
 ## Write a program in Python
 
