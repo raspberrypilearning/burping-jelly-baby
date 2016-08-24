@@ -100,7 +100,6 @@ The final step to make your jelly baby burp is to write a program in Python. The
     burp = pygame.mixer.Sound("burp.wav")
     ```
 1. Lastly, you can use an infinite loop to wait for the jelly baby to be pushed and then play the sound:
-pp
     ``` python
     while True:
         jelly_baby.wait_for_press()
