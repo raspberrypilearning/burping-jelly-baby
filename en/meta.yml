@@ -1,0 +1,24 @@
+---
+title: Burping Jelly Baby
+hero_image: images/banner.png
+description: Make a jelly baby burp when you squeeze it!
+original_url: https://raspberrypi.org/learning/burping-jelly-baby
+theme: red
+duration: 2
+listed: false
+ingredient: false
+copyedit: true
+curriculum: creator, design-0, programming-0, phys-comp-0, manufacture-0, community-0
+interests: ''
+technologies: rpi, physical computing, python
+site_areas: ''
+steps:
+- title: Introduction
+- title: What you will need
+- title: Burping Jelly Baby
+- title: Raspberry Pi GPIO pins
+- title: Wiring up the jelly baby
+- title: Sound of a burp!
+- title: Write a program in Python
+- title: What next?
+
