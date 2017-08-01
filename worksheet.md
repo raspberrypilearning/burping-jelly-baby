@@ -55,7 +55,7 @@ So far, you've created your input device and have your Raspberry Pi set up and r
 1. Download a copy of a burp sound effect with the following command:
 
     ```bash
-    wget http://rpf.io/burp -O burp.wav
+    wget http://rpf.io/burpls -O burp.wav
     ```
     
 1.  Now test that you can play the sound file using `aplay` by typing:
