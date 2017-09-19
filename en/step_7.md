@@ -4,7 +4,7 @@ The final step to make your jelly baby burp is to write a program in Python. The
 
 - Go to `Menu` > `Programming` > `Python 3 (IDLE)`.
 
-- Once IDLE 3 has opened, click on **File** and **New File**. This will open a blank file. Click on **File** and **Save As** and name the file `burp.py`. Make sure to save the file in the `jellybaby` folder you created earlier.
+- Once IDLE 3 has opened, click on **File** and **New File**. This will open a blank file. Click on **File** and **Save As** and name the file `burp.py`. Make sure you save the file in the `jellybaby` folder you created earlier.
 
 - Begin your program by importing the modules and libraries needed to make it work. Type the following:
 
