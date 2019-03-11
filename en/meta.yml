@@ -3,18 +3,10 @@ title: Burping Jelly Baby
 hero_image: images/banner.png
 description: Make a jelly baby burp when you squeeze it!
 original_url: https://raspberrypi.org/learning/burping-jelly-baby
-theme: green
-duration: 2
 listed: true
 ingredient: false
 copyedit: true
-curriculum: 1, design-0, programming-1, phys-comp-1, manufacture-1, community-0
-interests: ''
-technologies: electronic-components, python
-site_areas: projects
-hardware: electronic-components
-software: python
-version: 3
+version: 3.1
 last_tested: 2017-01-01
 steps: 
 - title: Introduction
