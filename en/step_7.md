@@ -2,9 +2,9 @@
 
 The final step to make your jelly baby burp is to write a program in Python. The program will detect when you press the jelly baby input device, and will output the burp sound.
 
-- Go to `Menu` > `Programming` > `Python 3 (IDLE)`.
+- Go to `Menu` > `Programming` > `Thonny`.
 
-- Once IDLE 3 has opened, click on **File** and **New File**. This will open a blank file. Click on **File** and **Save As** and name the file `burp.py`. Make sure you save the file in the `jellybaby` folder you created earlier.
+- Once Thonny has opened, click on **File** and **New File**. This will open a blank file. Click on **File** and **Save As** and name the file `burp.py`. Make sure you save the file in the `jellybaby` folder you created earlier.
 
 - Begin your program by importing the modules and libraries needed to make it work. Type the following:
 
