@@ -8,12 +8,16 @@ ingredient: false
 copyedit: true
 version: 3.1
 last_tested: 2017-01-01
-steps: 
+steps:
 - title: Introduction
 - title: What you will need
 - title: Burping Jelly Baby
 - title: Raspberry Pi GPIO pins
 - title: Wiring up the jelly baby
+  completion:
+  - engaged
 - title: Sound of a burp!
 - title: Write a program in Python
+  completion:
+  - internal
 - title: What next?
